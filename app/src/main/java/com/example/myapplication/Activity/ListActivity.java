@@ -1,10 +1,12 @@
-package com.example.myapplication;
+package com.example.myapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+
+import com.example.myapplication.R;
 
 public class ListActivity extends PreferenceActivity {
 

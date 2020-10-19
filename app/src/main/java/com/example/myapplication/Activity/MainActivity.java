@@ -1,6 +1,4 @@
-package com.example.myapplication;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.myapplication.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +7,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.myapplication.R;
 
 public class MainActivity extends Activity {
 

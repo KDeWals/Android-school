@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,6 +7,10 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.myapplication.BDD.User;
+import com.example.myapplication.BDD.UserAccessBdd;
+import com.example.myapplication.R;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -75,6 +79,18 @@ public class ChildrenActivity extends Activity {
                         et_children_pwd.getText().toString() + "#" +
                         et_children_email.getText().toString() + "#";
                 //Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
+
+                User user = new User(et_children_email.getText().toString(),
+                        et_children_pwd.getText().toString(),
+                        et_children_email.getText().toString());
+
+                UserAccessBdd userDb = new UserAccessBdd(this);
+                userDb.openForWrite();
+                userDb.insertUser(user);
+                userDb.Close();
+
+                /*
+                // FILE
                 try {
                     FileOutputStream outputStream = openFileOutput("monFichier.txt", MODE_APPEND);
                     byte[] tab;
@@ -85,7 +101,8 @@ public class ChildrenActivity extends Activity {
                     e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
+                }*/
+
                 break;
             case R.id.bt_children_read:
                 Intent intentRead = new Intent(this, FileActivity.class);
