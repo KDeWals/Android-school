@@ -1,6 +1,8 @@
 package com.example.myapplication.Activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -46,9 +48,30 @@ public class MainActivity extends Activity {
                 Toast.makeText(getApplicationContext(), "Un toast pour vous", Toast.LENGTH_LONG).show();
                 break;
             case R.id.bt_main_children:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Alerte activité")
+                        .setMessage("Voulez-vous afficher l'activité nommée Children ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(getApplicationContext(),
+                                        ChildrenActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("Non", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        })
+                        .create().show();
+                /*
                 Intent intent = new Intent(this, ChildrenActivity.class);
                 //startActivity(intent);
                 startActivityForResult(intent, CODE_ACTIVITE);
+                */
                 break;
             default:
                 break;
