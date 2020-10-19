@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F44336">
+<ImageView
+    android:layout_gravity="center"
+    android:id="@+id/iv_children_logo"
+    android:src="@android:drawable/btn_star"
+    android:layout_height="50dp"
+    android:layout_width="50dp"/>
+
+<TextView
+android:id="@+id/tv_children_title"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/login"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_children_login"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/password"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_children_password"
+    android:inputType="textPassword"
+    android:layout_marginBottom="25dp"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/email"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_children_email"
+    android:inputType="textEmailAddress"
+    android:layout_marginBottom="25dp"/>
+
+<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_children_save"
+        android:text="@string/sauver_les_donn_es"
+        android:onClick="onChildrenClickManager"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_children_read"
+        android:text="@string/lire_les_donn_es"
+        android:onClick="onChildrenClickManager"/>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bt_children_main"
+    android:text="@string/aller_vers_parent"
+    android:onClick="onChildrenClickManager"/>
+
+<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_children_liste"
+        android:text="@string/aller_vers_la_liste"
+        android:onClick="onChildrenClickManager"/>
+</LinearLayout>

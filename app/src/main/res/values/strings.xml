@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="enfant"><![CDATA[==> Enfant]]></string>
+    <string name="je_suis_un_toast">Je suis un toast</string>
+    <string name="login">Login :</string>
+    <string name="password">Password :</string>
+    <string name="email">Email :</string>
+    <string name="valider_le_formulaire">Valider le formulaire</string>
+    <string name="aller_vers_la_liste">Aller vers la liste</string>
+    <string name="aller_vers_enfant">Aller vers enfant</string>
+    <string name="aller_vers_parent">aller vers parent</string>
+    <string name="sauver_les_donn_es">Sauver les données</string>
+    <string name="lire_les_donn_es">lire les données</string>
+</resources>
